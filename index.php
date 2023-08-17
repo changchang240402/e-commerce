@@ -16,7 +16,7 @@
 	<?php include("layouts/_main-header.php"); ?>
 	<div class="main-content">
 		<div class="content-page">
-			<div class="title-section">Productos destacados</div>
+			<div class="title-section">Productos destacados project</div>
 			<div class="products-list" id="space-list">
 			</div>
 		</div>
