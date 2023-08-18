@@ -13,17 +13,14 @@ services:
       - "3306:3306"
     volumes:
       - ./database.sql:/docker-entrypoint-initdb.d/init.sql  
-  # php-apache-environment:
-  #   container_name: php-apache
-  #   build:
-  #     context: .
-  #     dockerfile: Dockerfile
-  #   depends_on:
-  #     - db
-  #   volumes:
-  #     - .:/var/www/html/
-  #     - type: bind
-  #       soure: .
-  #       target: /var/www/html/
-  #   ports:
-  #     - 80:80
+  php-apache-environment:
+    container_name: php-apache
+    build:
+      context: .
+      dockerfile: Dockerfile
+    depends_on:
+      - db
+    volumes:
+      - .:/var/www/html/
+    ports:
+      - 80:80
